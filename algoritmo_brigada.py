@@ -9,10 +9,10 @@ from openpyxl.formatting.rule import Rule
 from openpyxl.styles.differential import DifferentialStyle
 
 if getattr(sys, 'frozen', False):
-    # Executável
-    base_path = sys._MEIPASS
+    # Caminho da pasta onde o executável está
+    base_path = os.path.dirname(sys.executable)
 else:
-    # Script normal
+    # Caminho da pasta do script em modo desenvolvimento
     base_path = os.path.abspath(".")
 
 arquivo_path = os.path.join(base_path, "folhadepagamento_brigada.pdf")
